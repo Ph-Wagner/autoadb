@@ -23,5 +23,5 @@ jobs:
       uses: actions/upload-artifact@v2.2.1
       with:
         name: autoadb.bin
-        path: /home/runner/work/autoadb/autoadb
+        path: /home/runner/work/autoadb/autoadb/target/release/autoadb
 
