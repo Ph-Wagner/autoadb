@@ -25,3 +25,9 @@ jobs:
         name: autoadb.bin
         path: /home/runner/work/autoadb/autoadb/target/release/autoadb
 
+    - name:  Upload a Build Artifact with relative path
+      uses: actions/upload-artifact@v2.2.1
+      with:
+        name: autoadb
+        path: target/release/autoadb
+
