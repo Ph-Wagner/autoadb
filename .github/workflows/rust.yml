@@ -19,21 +19,21 @@ jobs:
     - name: Build
       run: cargo build --release
 
-#    - name:  Upload a Build Artifact with relative path
-#      uses: actions/upload-artifact@v2.2.1
-#      with:
-#        name: autoadb
-#        path: target/release/autoadb
-
-    - name: Git Release
-      uses: anton-yurchenko/git-release@v3.4.2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        CHANGELOG_FILE: "none"
-        ALLOW_EMPTY_CHANGELOG: "true"
-        PRE_RELEASE: "true"
-        DRAFT_RELEASE: "false"
-        ALLOW_TAG_PREFIX: "true"
+    - name:  Upload a Build Artifact with relative path
+      uses: actions/upload-artifact@v2.2.1
       with:
-        args: |
-          target/release/autoadb
+        name: autoadb
+        path: target/release/autoadb
+
+#    - name: Git Release
+#      uses: anton-yurchenko/git-release@v3.4.2
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        CHANGELOG_FILE: "none"
+#        ALLOW_EMPTY_CHANGELOG: "true"
+#        PRE_RELEASE: "true"
+#        DRAFT_RELEASE: "false"
+#        ALLOW_TAG_PREFIX: "true"
+#      with:
+#        args: |
+#          target/release/autoadb
